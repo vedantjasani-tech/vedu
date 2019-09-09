@@ -3,10 +3,11 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 
-options = webdriver.ChromeOptions()
+options = Options()
 options.headless = True
-browser = webdriver.Chrome(chrome_options = options)
+browser = webdriver.Chrome(options=options)
 
+browser.get('https://www.atg.party')
 time.sleep(5)
 elem = browser.find_element_by_link_text('Login')
 elem.click()
